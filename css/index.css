@@ -1,0 +1,146 @@
+body {
+    background-color: rgb(236, 236, 236);
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+.options {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    background-color: darkcyan;
+    padding: 1.5%;
+}
+
+.options input {
+    width: 70%;
+    padding: 0.5%;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+}
+
+.options img {
+    width: 40px;
+    height: 40px;
+    filter: invert(100);
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+    border-radius: 20px;
+    width: 350px;
+    margin: 1.5%;
+}
+
+.item div {
+    display: flex;
+    flex-direction: row;
+    width: 85%;
+}
+
+.item input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 80%;
+}
+
+select {
+    width: 100%;
+    padding: 5px;
+    outline: none;
+    text-align: center;
+    margin: 20px;
+}
+
+option:disabled {
+    background-color: lightcoral;
+    color: red;
+}
+
+.desc {
+    text-align: center;
+    font-weight: bolder;
+    font-size: large;
+}
+
+.price {
+    text-align: right;
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+.item button,
+.item a {
+    text-decoration: none;
+    border: none;
+    outline: none;
+    padding: 10px;
+    margin: 1%;
+    margin-bottom: 5%;
+    transition: 0.5s;
+}
+
+.buy {
+    background-color: lightgreen;
+    color: green;
+    font-weight: bolder;
+    border-radius: 10px;
+    width: 70%;
+}
+
+
+.buy:hover {
+    background-color: rgba(112, 185, 112, 0.788);
+    color: green;
+    transition: 0.5s;
+}
+
+.setCart:hover {
+    background-color: rgba(65, 137, 230, 0.281);
+    transition: 0.5s;
+
+}
+
+.setCart img {
+    width: 25px;
+}
+
+.setCart {
+    background-color: rgba(65, 137, 230, .15);
+    border-radius: 5px;
+    width: 30%;
+
+
+}
+
+.item .img {
+    width: 300px;
+    height: 300px;
+    margin-top: 10%;
+    border-radius: 5px;
+}
+
+.logActive{
+    display: block;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.logDesactive{
+    display: none;
+}

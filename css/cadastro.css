@@ -1,0 +1,102 @@
+body {
+    background-color: rgb(236, 236, 236);
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+span {
+    color: red;
+    text-align: center;
+}
+
+.options {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    background-color: darkcyan;
+    padding: 1.5%;
+}
+
+.options input {
+    width: 70%;
+    padding: 0.5%;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+}
+
+.options button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.options img {
+    width: 40px;
+    height: 40px;
+    filter: invert(100);
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 85vh;
+}
+
+.ui {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.side {
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+}
+
+.side input {
+    width: 300px;
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+.side input:disabled {
+    background-color: transparent;
+    font-weight: bolder;
+    border: none;
+    outline: none;
+}
+
+.button {
+    border: none;
+    outline: none;
+    background-color: darkcyan;
+    color: white;
+    font-weight: bolder;
+}
+
+.button:hover {
+    border: none;
+    outline: none;
+    background-color: rgb(0, 131, 131);
+    color: white;
+    font-weight: bolder;
+}
+
+.logActive{
+    display: block;
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+}
+
+.logDesactive{
+    display: none;
+}
+
