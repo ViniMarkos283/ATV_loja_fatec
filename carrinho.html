@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/icons/loja-de-jogos.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/carrinho.css">
+    <script src="JS/carrinho.js"></script>
+    <title>Carrinho de compras</title>
+</head>
+
+<body onload="mostrarCarrinho()">
+    <header>
+        <div class="options">
+            <a href="index.html"><img src="img/icons/loja-de-fachada.png" alt=""></a>
+            <input type="search" placeholder="Pesquise o nome de algum produto">
+            <a href="carrinho.html"><img src="img/icons/carrinho-de-compras.png" alt=""></a>
+            <a href="cadastro.html"><img src="img/icons/login.png" id="user"></a>
+            <button class="logDesactive" onclick="sair()"><img src="img/icons/logout.png" alt="visitante"></button>
+        </div>
+    </header>
+
+    <div class="center">
+        <div class="words">
+            <h4>Confira o seu carrinho de compras</h4>
+        </div>
+        <div class="notItem">
+            <img class="img" src="#" alt="">
+            <div class="left">
+                <p>Produto: <input type="text" class="desc" value="" disabled></p>
+                <p>Plataforma: <input type="text" class="platform" value="" disabled></p>
+            </div>
+
+            <div class="right">
+                <input type="text" class="price" value="" disabled>
+                <input class="delete" type="button" value="Remover" onclick="limpar(0)">
+            </div>
+        </div>
+
+        <div class="notItem">
+            <img class="img" src="#" alt="">
+            <div class="left">
+                <p>Produto: <input type="text" class="desc" value="" disabled></p>
+                <p>Plataforma: <input type="text" class="platform" value="" disabled></p>
+            </div>
+
+            <div class="right">
+                <input type="text" class="price" value="" disabled>
+                <input class="delete" type="button" value="Remover" onclick="limpar(1)">
+            </div>
+        </div>
+
+        <div class="notItem">
+            <img class="img" src="#" alt="">
+            <div class="left">
+                <p>Produto: <input type="text" class="desc" value="" disabled></p>
+                <p>Plataforma: <input type="text" class="platform" value="" disabled></p>
+            </div>
+
+            <div class="right">
+                <input type="text" class="price" value="" disabled>
+                <input class="delete" type="button" value="Remover" onclick="limpar(2)">
+            </div>
+        </div>
+
+        <div class="notItem">
+            <img class="img" src="#" alt="">
+            <div class="left">
+                <p>Produto: <input type="text" class="desc" value="" disabled></p>
+                <p>Plataforma: <input type="text" class="platform" value="" disabled></p>
+            </div>
+
+            <div class="right">
+                <input type="text" class="price" value="" disabled>
+                <input class="delete" type="button" value="Remover" onclick="limpar(3)">
+            </div>
+        </div>
+
+        <div class="notItem">
+            <img class="img" src="#" alt="">
+            <div class="left">
+                <p>Produto: <input type="text" class="desc" value="" disabled></p>
+                <p>Plataforma: <input type="text" class="platform" value="" disabled></p>
+            </div>
+
+            <div class="right">
+                <input type="text" class="price" value="" disabled>
+                <input class="delete" type="button" value="Remover" onclick="limpar(4)">
+            </div>
+        </div>
+
+        <div class="notItem">
+            <img class="img" src="#" alt="">
+            <div class="left">
+                <p>Produto: <input type="text" class="desc" value="" disabled></p>
+                <p>Plataforma: <input type="text" class="platform" value="" disabled></p>
+            </div>
+
+            <div class="right">
+                <input type="text" class="price" value="" disabled>
+                <input class="delete" type="button" value="Remover" onclick="limpar(5)">
+            </div>
+        </div>
+
+        <div class="notItem">
+            <img class="img" src="#" alt="">
+            <div class="left">
+                <p>Produto: <input type="text" class="desc" value="" disabled></p>
+                <p>Plataforma: <input type="text" class="platform" value="" disabled></p>
+            </div>
+
+            <div class="right">
+                <input type="text" class="price" value="" disabled>
+                <input class="delete" type="button" value="Remover" onclick="limpar(6)">
+            </div>
+        </div>
+
+        <div class="notItem">
+            <img class="img" src="#" alt="">
+            <div class="left">
+                <p>Produto: <input type="text" class="desc" value="" disabled></p>
+                <p>Plataforma: <input type="text" class="platform" value="" disabled></p>
+            </div>
+
+            <div class="right">
+                <input type="text" class="price" value="" disabled>
+                <input class="delete" type="button" value="Remover" onclick="limpar(7)">
+            </div>
+        </div>
+
+        <div class="notItem">
+            <img class="img" src="#" alt="">
+            <div class="left">
+                <p>Produto: <input type="text" class="desc" value="" disabled></p>
+                <p>Plataforma: <input type="text" class="platform" value="" disabled></p>
+            </div>
+
+            <div class="right">
+                <input type="text" class="price" value="" disabled>
+                <input class="delete" type="button" value="Remover" onclick="limpar(8)">
+            </div>
+        </div>
+
+
+        <div class="payment">
+            <h4>Escolha seu meio de <br> pagamento e confirme a compra</h4>
+
+            <div class="select">
+                <img src="img/icons/99478346-fcb8b880-2932-11eb-8451-7f2f35335c04.png" alt="">
+                <input type="radio" name="pagment" checked>
+            </div>
+            <div class="select">
+                <img src="img/icons/card.png" alt="">
+                <input type="radio" name="pagment">
+            </div>
+            <div class="select">
+                <img src="img/icons/paypal.png" alt="">
+                <input type="radio" name="pagment">
+            </div>
+            <div class="select">
+                <img src="img/icons/visa.png" alt="">
+                <input type="radio" name="pagment">
+            </div>
+            <div class="select">
+                <input type="text" class="real" id="total" value="" disabled>
+            </div>
+            <div class="select">
+                <button id="buy" class="pay" onclick="alert('por favor! faça o login antes de finalizar a compra')">Finalizar a compra</button>
+                <input type="button" class="clean" value="Limpar o carrinho" onclick="carrinho(), location.reload()">
+            </div>
+
+        </div>
+    </div>
+
+    <script src="JS/cadastro.js"></script>
+</body>
+
+</html>

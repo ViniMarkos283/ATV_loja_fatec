@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/icons/loja-de-jogos.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/cadastro.css">
+    <title>Cadastre-se ou faça o login</title>
+</head>
+
+<body>
+    <header>
+        <div class="options">
+            <a href="index.html"><img src="img/icons/loja-de-fachada.png" alt=""></a>
+            <input type="search" placeholder="Pesquise o nome de algum produto">
+            <a href="carrinho.html"><img src="img/icons/carrinho-de-compras.png" alt=""></a>
+            <a href="cadastro.html"><img src="img/icons/login.png" id="user"></a>
+            <button class="logDesactive" onclick="sair()"><img src="img/icons/logout.png" alt="visitante"></button>
+        </div>
+    </header>
+
+        <div class="center">
+            <div class="ui">
+                <div class="side">
+                    <input type="text" value="Realize seu cadastro" disabled>
+                    <input type="text" placeholder="digite o seu nome" id="name">
+                    <input type="text" placeholder="digite o seu E-mail" id="email">
+                    <input type="password" placeholder="digite o sua senha" id="password">
+                    <input type="password" placeholder="confirme sua senha" id="confirmPass">
+                    <input type="button" class="button" value="Cadastrar" onclick="cadastrar()">
+                    <span id="error1"></span>
+                </div>
+                <div class="side">
+                    <input type="text" value="Realize seu Login" disabled>
+                    <input type="text" placeholder="digite o seu E-mail" id="logEmail">
+                    <input type="password" placeholder="digite a sua senha" id="logPassword">
+                    <input type="button" class="button" value="Login" onclick="logar()">
+                    <span id="error2"></span>
+
+
+                </div>
+            </div>
+        </div>
+
+    <script src="JS/cadastro.js"></script>
+
+
+</body>
+
+</html>

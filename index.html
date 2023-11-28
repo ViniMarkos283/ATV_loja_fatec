@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/icons/loja-de-jogos.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="JS/carrinho.js"></script>
+    <title>Loja online</title>
+</head>
+
+<body onload="carrinho()">
+    <header>
+        <div class="options">
+            <a href="index.html"><img src="img/icons/loja-de-fachada.png" alt=""></a>
+            <input type="search" placeholder="Pesquise o nome de algum produto">
+            <a href="carrinho.html"><img src="img/icons/carrinho-de-compras.png" alt=""></a>
+            <a href="cadastro.html"><img src="img/icons/login.png" id="user"></a>
+            <button class="logDesactive" onclick="sair()"><img src="img/icons/logout.png" alt="visitante"></button>
+        </div>
+    </header>
+
+    <div class="list">
+        <div class="item">
+            <img id="img1" src="img/rdr2.png" alt="" class="img"><br>
+            <input id="desc1" class="desc" type="text" value="Red Dead Redeption 2" disabled>
+            <div>
+                <select name="platform" id="platform1">
+                    <option value="PC">Plataforma: PC</option>
+                    <option value="XBOX">Plataforma: XBOX</option>
+                    <option value="Playstation">Plataforma: Playstation</option>
+                </select>
+            </div>
+            <div>
+                <input class="price" type="text" value="R$">
+                <input id="price1" class="price" type="text" value="299.90" disabled>
+            </div>
+            <div>
+                <a href="carrinho.html" class="buy"
+                    onclick="addCarrinho('#img1', '#platform1', '#desc1', '#price1')">Comprar</a>
+                <button class="setCart" onclick="addCarrinho('#img1', '#platform1', '#desc1', '#price1') ,     alert('Item adicionado ao carrinho!')
+                "><img src="img/icons/carrinho-carrinho.png" alt="" class="icon"></button>
+            </div>
+        </div>
+        <div class="item">
+            <img id="img2" src="img/re4.png" alt="" class="img"><br>
+            <input id="desc2" class="desc" type="text" value="Resident Evil 4 Remake" disabled>
+            <div>
+                <select name="platform" id="platform2">
+                    <option value="PC">Plataforma: PC</option>
+                    <option value="XBOX">Plataforma: XBOX</option>
+                    <option value="Playstation">Plataforma: Playstation</option>
+                </select>
+            </div>
+            <div>
+                <input class="price" type="text" value="R$">
+                <input id="price2" class="price" type="text" value="249.00" disabled>
+            </div>
+            <div>
+                <a href="carrinho.html" class="buy"
+                    onclick="addCarrinho('#img2', '#platform2', '#desc2', '#price2')">Comprar</a>
+                <button class="setCart" onclick="addCarrinho('#img2', '#platform2', '#desc2', '#price2') ,     alert('Item adicionado ao carrinho!')
+                "><img src="img/icons/carrinho-carrinho.png" alt="" class="icon"></button>
+            </div>
+        </div>
+        <div class="item">
+            <img id="img3" src="img/gow.png" alt="" class="img"><br>
+            <input id="desc3" class="desc" type="text" value="God of War 2018" disabled>
+            <div>
+                <select name="platform" id="platform3">
+                    <option value="PC">Plataforma: PC</option>
+                    <option value="XBOX" disabled>Plataforma: XBOX</option>
+                    <option value="Playstation">Plataforma: Playstation</option>
+                </select>
+            </div>
+            <div>
+                <input class="price" type="text" value="R$">
+                <input id="price3" class="price" type="text" value="199.90" disabled>
+            </div>
+            <div>
+                <a href="carrinho.html" class="buy"
+                    onclick="addCarrinho('#img3', '#platform3', '#desc3', '#price3')">Comprar</a>
+                <button class="setCart" onclick="addCarrinho('#img3', '#platform3', '#desc3', '#price3') ,     alert('Item adicionado ao carrinho!')
+                "><img src="img/icons/carrinho-carrinho.png" alt="" class="icon"></button>
+            </div>
+        </div>
+    </div>
+    <div class="list">
+        <div class="item">
+            <img id="img4" src="img/elden_ring.png" alt="" class="img"><br>
+            <input id="desc4" class="desc" type="text" value="Elden Ring" disabled>
+            <div>
+                <select name="platform" id="platform4">
+                    <option value="PC">Plataforma: PC</option>
+                    <option value="XBOX">Plataforma: XBOX</option>
+                    <option value="Playstation">Plataforma: Playstation</option>
+                </select>
+            </div>
+            <div>
+                <input class="price" type="text" value="R$">
+                <input id="price4" class="price" type="text" value="229.90" disabled>
+            </div>
+            <div>
+                <a href="carrinho.html" class="buy"
+                    onclick="addCarrinho('#img4', '#platform4', '#desc4', '#price4')">Comprar</a>
+                <button class="setCart" onclick="addCarrinho('#img4', '#platform4', '#desc4', '#price4') ,     alert('Item adicionado ao carrinho!')
+                "><img src="img/icons/carrinho-carrinho.png" alt="" class="icon"></button>
+            </div>
+        </div>
+        <div class="item">
+            <img id="img5" src="img/sekiro.png" alt="" class="img"><br>
+            <input id="desc5" class="desc" type="text" value="Sekiro: Shadows Die Twice" disabled>
+            <div>
+                <select name="platform" id="platform5">
+                    <option value="PC">Plataforma: PC</option>
+                    <option value="XBOX">Plataforma: XBOX</option>
+                    <option value="Playstation">Plataforma: Playstation</option>
+                </select>
+            </div>
+            <div>
+                <input class="price" type="text" value="R$">
+                <input id="price5" class="price" type="text" value="274.00" disabled>
+            </div>
+            <div>
+                <a href="carrinho.html" class="buy"
+                    onclick="addCarrinho('#img5', '#platform5', '#desc5', '#price5')">Comprar</a>
+                <button class="setCart" onclick="addCarrinho('#img5', '#platform5', '#desc5', '#price5') ,     alert('Item adicionado ao carrinho!')
+                "><img src="img/icons/carrinho-carrinho.png" alt="" class="icon"></button>
+            </div>
+        </div>
+        <div class="item">
+            <img id="img6" src="img/tlou.png" alt="" class="img"><br>
+            <input id="desc6" class="desc" type="text" value="The Last of Us Part I" disabled>
+            <div>
+                <select name="platform" id="platform6">
+                    <option value="PC">Plataforma: PC</option>
+                    <option value="XBOX" disabled>Plataforma: XBOX</option>
+                    <option value="Playstation">Plataforma: Playstation</option>
+                </select>
+            </div>
+            <div>
+                <input class="price" type="text" value="R$">
+                <input id="price6" class="price" type="text" value="249.90" disabled>
+            </div>
+            <div>
+                <a href="carrinho.html" class="buy"
+                    onclick="addCarrinho('#img6', '#platform6', '#desc6', '#price6')">Comprar</a>
+                <button class="setCart" onclick="addCarrinho('#img6', '#platform6', '#desc6', '#price6') ,     alert('Item adicionado ao carrinho!')
+                "><img src="img/icons/carrinho-carrinho.png" class="icon"></button>
+            </div>
+        </div>
+    </div>
+    <div class="list">
+        <div class="item">
+            <img id="img7" src="img/lies_of_p.png" alt="" class="img"><br>
+            <input id="desc7" class="desc" type="text" value="Lies of P" disabled>
+            <div>
+                <select name="platform" id="platform7">
+                    <option value="PC">Plataforma: PC</option>
+                    <option value="XBOX">Plataforma: XBOX</option>
+                    <option value="Playstation">Plataforma: Playstation</option>
+                </select>
+            </div>
+            <div>
+                <input class="price" type="text" value="R$">
+                <input id="price7" class="price" type="text" value="249.90" disabled>
+            </div>
+            <div>
+                <a href="carrinho.html" class="buy"
+                    onclick="addCarrinho('#img7', '#platform7', '#desc7', '#price7')">Comprar</a>
+                <button class="setCart" onclick="addCarrinho('#img7', '#platform7', '#desc7', '#price7') ,      alert('Item adicionado ao carrinho!')
+                "><img src="img/icons/carrinho-carrinho.png" class="icon"></button>
+            </div>
+        </div>
+        <div class="item">
+            <img id="img8" src="img/mk1.png" alt="" class="img"><br>
+            <input id="desc8" class="desc" type="text" value="Mortal Kombat 1" disabled>
+            <div>
+                <select name="platform" id="platform8">
+                    <option value="PC">Plataforma: PC</option>
+                    <option value="XBOX">Plataforma: XBOX</option>
+                    <option value="Playstation">Plataforma: Playstation</option>
+                </select>
+            </div>
+            <div>
+                <input class="price" type="text" value="R$">
+                <input id="price8" class="price" type="text" value="279.90" disabled>
+            </div>
+            <div>
+                <a href="carrinho.html" class="buy"
+                    onclick="addCarrinho('#img8', '#platform8', '#desc8', '#price8')">Comprar</a>
+                <button class="setCart" onclick="addCarrinho('#img8', '#platform8', '#desc8', '#price8') ,     alert('Item adicionado ao carrinho!')
+                "><img src="img/icons/carrinho-carrinho.png" alt="" class="icon"></button>
+            </div>
+        </div>
+        <div class="item">
+            <img id="img9" src="img/sp2.png" alt="" class="img"><br>
+            <input id="desc9" class="desc" type="text" value="Spider Man 2" disabled>
+            <div>
+                <select name="platform" id="platform9">
+                    <option value="PC" disabled>Plataforma: PC</option>
+                    <option value="XBOX" disabled>Plataforma: XBOX</option>
+                    <option value="Playstation">Plataforma: Playstation</option>
+                </select>
+            </div>
+            <div>
+                <input class="price" type="text" value="R$">
+                <input id="price9" class="price" type="text" value="349.90" disabled>
+            </div>
+            <div>
+                <a href="carrinho.html" class="buy"
+                    onclick="addCarrinho('#img9', '#platform9', '#desc9', '#price9')">Comprar</a>
+                <button class="setCart" onclick="addCarrinho('#img9', '#platform9', '#desc9', '#price9') ,     alert('Item adicionado ao carrinho!')
+                "><img src="img/icons/carrinho-carrinho.png" alt="" class="icon"></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="JS/cadastro.js"></script>
+</body>
+
+</html>
