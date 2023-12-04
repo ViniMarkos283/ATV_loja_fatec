@@ -13,6 +13,13 @@ body {
     padding: 1.5%;
 }
 
+@media screen and (max-width: 767px) {
+    .options {
+        padding: 5%;
+        justify-content: space-between;
+    }
+}
+
 .options input {
     width: 70%;
     padding: 0.5%;
@@ -23,7 +30,6 @@ body {
 
 @media screen and (max-width: 767px) {
     .options input {
-        width: 65%;
         padding: 0.2%;
     }
 }
@@ -36,8 +42,8 @@ body {
 
 @media screen and (max-width: 767px) {
     .options img {
-        width: 20px;
-        height: 20px;
+        width: 25px;
+        height: 25px;
     }
 }
 
