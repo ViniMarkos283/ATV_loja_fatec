@@ -1,4 +1,6 @@
 body {
+    width: 100%;
+    height: min-content;
     background-color: rgb(236, 236, 236);
     text-decoration: none;
     font-family: sans-serif;
@@ -21,16 +23,41 @@ body {
     outline: none;
 }
 
+@media screen and (max-width: 800px) {
+    .options input {
+        width: 65%;
+        padding: 0.2%;
+        border: none;
+        border-radius: 20px;
+        outline: none;
+    }
+}
+
 .options img {
     width: 40px;
     height: 40px;
     filter: invert(100);
 }
 
+@media screen and (max-width: 800px) {
+    .options img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
 .list {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+}
+
+@media screen and (max-width: 800px) {
+    .list {
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
 }
 
 .item {
@@ -43,6 +70,15 @@ body {
     border-radius: 20px;
     width: 350px;
     margin: 1.5%;
+}
+
+@media screen and (max-width: 800px) {
+    .item {
+        margin: 0 auto;
+        margin-bottom: 2.5%;
+        margin-top: 5%;
+
+    }
 }
 
 .item div {
@@ -132,6 +168,15 @@ option:disabled {
     height: 300px;
     margin-top: 10%;
     border-radius: 5px;
+}
+
+@media screen and (max-width: 800px) {
+    .item .img {
+        width: 300px;
+        height: 300px;
+        margin-top: 5%;
+        border-radius: 5px;
+    }
 }
 
 .logActive{
