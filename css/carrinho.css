@@ -65,7 +65,7 @@ body {
 
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 767px) {
     .item {
         width: 100%;
         margin: 2%;
@@ -107,7 +107,7 @@ body {
     align-items: end;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 767px) {
     .right {
         align-items: baseline;
     }
@@ -131,7 +131,7 @@ body {
 
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 767px) {
     .delete {
         width: min-content;
     }
@@ -149,7 +149,7 @@ body {
 
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 767px) {
     .payment {
         flex-direction: column;
         width: 100%;
@@ -168,7 +168,7 @@ body {
     justify-content: center;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 767px) {
     .select {
         display: flex;
         flex-wrap: wrap;

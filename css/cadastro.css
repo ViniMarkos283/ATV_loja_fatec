@@ -62,6 +62,8 @@ span {
     height: 85vh;
 }
 
+
+
 .ui {
     display: flex;
     flex-direction: row;
@@ -69,10 +71,22 @@ span {
     border-radius: 20px;
 }
 
+@media screen and (max-width: 767px) {
+    .ui {
+        flex-direction: column;
+    }
+}
+
 .side {
     display: flex;
     flex-direction: column;
     margin: 50px;
+}
+
+@media screen and (max-width: 767px) {
+    .side {
+        margin: 20px;
+    }
 }
 
 .side input {
@@ -105,7 +119,7 @@ span {
     font-weight: bolder;
 }
 
-.logActive{
+.logActive {
     display: block;
     background-color: transparent;
     border: none;
@@ -113,7 +127,6 @@ span {
 
 }
 
-.logDesactive{
+.logDesactive {
     display: none;
 }
-
