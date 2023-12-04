@@ -21,10 +21,24 @@ body {
     outline: none;
 }
 
+@media screen and (max-width: 767px) {
+    .options input {
+        width: 65%;
+        padding: 0.2%;
+    }
+}
+
 .options img {
     width: 40px;
     height: 40px;
     filter: invert(100);
+}
+
+@media screen and (max-width: 767px) {
+    .options img {
+        width: 20px;
+        height: 20px;
+    }
 }
 
 .center {
@@ -51,6 +65,12 @@ body {
 
 }
 
+@media screen and (max-width: 800px) {
+    .item {
+        width: 100%;
+    }
+}
+
 .notItem {
     display: none;
 }
@@ -69,6 +89,7 @@ body {
     height: 10vh;
 }
 
+
 .left {
 
     left: 0;
@@ -82,6 +103,12 @@ body {
 .right {
     right: 0;
     align-items: end;
+}
+
+@media screen and (max-width: 800px) {
+    .right {
+        align-items: baseline;
+    }
 }
 
 .left p {
@@ -102,6 +129,12 @@ body {
 
 }
 
+@media screen and (max-width: 800px) {
+    .delete {
+        width: min-content;
+    }
+}
+
 .payment {
     display: flex;
     flex-direction: row;
@@ -112,6 +145,13 @@ body {
     margin: 0.5%;
     border-radius: 20px;
 
+}
+
+@media screen and (max-width: 800px) {
+    .payment {
+        flex-direction: column;
+        width: 100%;
+    }
 }
 
 .payment h4 {
@@ -126,6 +166,15 @@ body {
     justify-content: center;
 }
 
+@media screen and (max-width: 800px) {
+    .select {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+}
 
 .select img {
     width: 50px;
@@ -172,7 +221,7 @@ body {
     margin-left: 10px;
 }
 
-.logActive{
+.logActive {
     display: block;
     background-color: transparent;
     border: none;
@@ -180,6 +229,6 @@ body {
 
 }
 
-.logDesactive{
+.logDesactive {
     display: none;
 }
