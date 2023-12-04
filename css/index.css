@@ -23,7 +23,7 @@ body {
     outline: none;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 767px) {
     .options input {
         width: 65%;
         padding: 0.2%;
@@ -39,7 +39,7 @@ body {
     filter: invert(100);
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 767px) {
     .options img {
         width: 20px;
         height: 20px;
@@ -52,7 +52,7 @@ body {
     justify-content: space-evenly;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 767px) {
     .list {
         flex-direction: column;
         justify-content: center;
@@ -72,7 +72,7 @@ body {
     margin: 1.5%;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 767px) {
     .item {
         margin: 0 auto;
         margin-bottom: 2.5%;
@@ -170,7 +170,7 @@ option:disabled {
     border-radius: 5px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 767px) {
     .item .img {
         width: 300px;
         height: 300px;
