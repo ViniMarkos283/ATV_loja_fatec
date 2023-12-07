@@ -20,7 +20,7 @@ function cadastrar() {
 
     } else {
         if (nm != "" && em != "" && ps != "") {
-            let data = { id: Date.now(), name: nm, email: em, password: ps, status: false } // declara a estrutura de como os dados vao ser recebidos dentro da table
+            let data = { id: dados.length + 1, name: nm, email: em, password: ps, status: false } // declara a estrutura de como os dados vao ser recebidos dentro da table
             dados.push(data) // envia o data para dentro da const dados
 
             const table = JSON.stringify(dados) // stringifica a table
