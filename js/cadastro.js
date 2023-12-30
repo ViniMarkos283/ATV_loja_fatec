@@ -20,7 +20,7 @@ function cadastrar() {
 
     } else {
         if (nm != "" && em != "" && ps != "") {
-            let data = { id: dados.length + 1, name: nm, email: em, password: ps, status: false } // declara a estrutura de como os dados vao ser recebidos dentro da table
+            let data = { id: dados.length + 1, name: nm, email: em, password: ps, status: false, image: null } // declara a estrutura de como os dados vao ser recebidos dentro da table
             dados.push(data) // envia o data para dentro da const dados
 
             const table = JSON.stringify(dados) // stringifica a table
@@ -35,7 +35,7 @@ function cadastrar() {
 }
 
 function logar() {
-    const dados = JSON.parse(localStorage.getItem('table'))
+    const dados = JSON.parse(localStorage.getItem('table')) || []
 
     em = document.querySelector('#logEmail').value
     ps = document.querySelector('#logPassword').value
@@ -47,14 +47,14 @@ function logar() {
 
     for (let i = 0; i < dados.length; i++) { // loga só o escolhido
         if (em == dados[i].email && ps == dados[i].password) { // caso o valor dentro dos daods tenha algum parecido com o que foi informado pelo input...
-            let data = { id: dados[i].id, name: dados[i].name, email: dados[i].email, password: dados[i].password, status: true }
+            let data = { id: dados[i].id, name: dados[i].name, email: dados[i].email, password: dados[i].password, status: true, image: dados[i].image }
             dados[i] = data
 
             const table = JSON.stringify(dados)
             localStorage.setItem('table', table)
 
             alert('Logado com sucesso!')
-            window.location = "carrinho.html"
+            history.back()
             break
         } else {
             document.querySelector('#error2').textContent = "E-mail ou senha incorretos!"
@@ -77,35 +77,49 @@ function localizar() { // fiz a função, mas ela nem é usada aqui
 function alterar() {
     const dados = JSON.parse(localStorage.getItem('table'))
 
+    id = document.querySelector('#id').value
     nm = document.querySelector('#name').value
     em = document.querySelector('#email').value
     ps = document.querySelector('#password').value
 
     for (let i = 0; i < dados.length; i++) {
-        if (em == dados[i].email) {
-            let data = { id: dados[i].id, name: nm, email: em, password: ps }
+        if (id == dados[i].id) {
+            let data = { id: dados[i].id, name: nm, email: em, password: ps, image: null }
 
             dados[i] = data
             localStorage.setItem('table', JSON.stringify(dados)) // versao resumida de como stringificar e setar ao msm tempo
             alert('dados atualizados')
             break
         }
+        localStorage.setItem('table', JSON.stringify(dados))
     }
+
 }
 
 function apagar() {
     const dados = JSON.parse(localStorage.getItem('table'))
-
-    em = document.querySelector('#email').value
+    id = document.querySelector('#id').value
 
     for (let i = 0; i < dados.length; i++) {
-        if (em == dados[i].email) {
-            delete dados[i] // delete para limpar o campo desejado dentro da tabela
+        if (id == dados[i].id) {
+            delete dados[i] 
+            dados.splice(i, 1);
             alert('cadastro apagado')
             break
         }
     }
+    sair()
     localStorage.setItem('table', JSON.stringify(dados))
+}
+
+function choiceApagar() {
+    let userResponse = window.confirm("Tem certeza de que deseja apagar sua conta?");
+
+    if (userResponse) {
+        apagar()
+    } else {
+        console.log("Ação cancelada.");
+    }
 }
 
 
@@ -116,16 +130,46 @@ function limparCampos() { // limpa os cmapos dos inputs, só isso
     document.querySelector('#confirPass').value = ''
 }
 
+function exibe() {
+    const dados = JSON.parse(localStorage.getItem('table'))
+    ft = document.querySelector('#ft')
+
+
+    for (let i = 0; i < dados.length; i++) {
+        if (dados[i].status == true) {
+            document.querySelector('#id').value = dados[i].id
+            document.querySelector('#name').value = dados[i].name
+            document.querySelector('#email').value = dados[i].email
+        }
+        if (dados[i].image == null) {
+            ft.setAttribute('src', 'img/icons/conf.png')
+        }
+        else {
+            ft.src = dados[i].image
+        }
+    }
+
+}
+
 function stats() { // verifica se tem alguém com o status no true, se tiver, muda o header para a versão logada
     const dados = JSON.parse(localStorage.getItem('table'))
 
     user = document.querySelector('#user')
+    a = document.querySelectorAll('a')
     buyButton = document.querySelector('#buy')
     logout = document.querySelector('.logDesactive, .logActive')
 
     for (let i = 0; i < dados.length; i++) {
         if (dados[i].status == true) {
-            user.src = "img/icons/conf.png"
+            if (dados[i].image == null) {
+                user.src = "img/icons/conf.png"
+            }
+            else {
+                user.src = dados[i].image
+            }
+            user.setAttribute('class', 'log')
+            a[2].setAttribute('href', 'user.html')
+
             if (buyButton) {
                 buyButton.setAttribute('onclick', 'compra()');
             }
@@ -139,7 +183,7 @@ function sair() { // serve para mudar o status de true para false, assim a funç
 
     for (let i = 0; i < dados.length; i++) {
         if (dados[i].status == true) {
-            let data = { id: dados[i].id, name: dados[i].name, email: dados[i].email, password: dados[i].password, status: false }
+            let data = { id: dados[i].id, name: dados[i].name, email: dados[i].email, password: dados[i].password, status: false, image: dados[i].image }
             dados[i] = data
 
             const table = JSON.stringify(dados)

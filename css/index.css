@@ -6,49 +6,6 @@ body {
     font-family: sans-serif;
 }
 
-.options {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    align-items: center;
-    background-color: darkcyan;
-    padding: 1.5%;
-}
-
-@media screen and (max-width: 767px) {
-    .options {
-        padding: 5%;
-        justify-content: space-between;
-    }
-}
-
-.options input {
-    width: 70%;
-    padding: 0.5%;
-    border: none;
-    border-radius: 20px;
-    outline: none;
-}
-
-@media screen and (max-width: 767px) {
-    .options input {
-        padding: 0.2%;
-    }
-}
-
-.options img {
-    width: 40px;
-    height: 40px;
-    filter: invert(100);
-}
-
-@media screen and (max-width: 767px) {
-    .options img {
-        width: 25px;
-        height: 25px;
-    }
-}
-
 .list {
     display: flex;
     flex-direction: row;
@@ -185,15 +142,4 @@ option:disabled {
         height: 275px;
         margin-top: 5%;
     }
-}
-
-.logActive {
-    display: block;
-    background-color: transparent;
-    border: none;
-    outline: none;
-}
-
-.logDesactive {
-    display: none;
 }
