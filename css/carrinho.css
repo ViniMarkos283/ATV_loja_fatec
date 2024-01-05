@@ -57,6 +57,7 @@
 .left input {
     background-color: transparent;
     border: none;
+    width: 75%;
 }
 
 .right {
