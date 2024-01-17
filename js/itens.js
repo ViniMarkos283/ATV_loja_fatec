@@ -40,7 +40,3 @@ function loadItens(){
     let produtos = JSON.stringify(itens)
     sessionStorage.setItem('produtos', produtos)
 }
-
-function expandeItens(){
-    
-}
