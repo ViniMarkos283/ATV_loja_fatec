@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/carrinho.css">
-    <link rel="stylesheet" href="css/header.css">
+    <script src="JS/carrinho.js"></script>
     <title>Carrinho de compras</title>
 </head>
 
@@ -143,19 +143,6 @@
                 <input class="delete" type="button" value="Remover" onclick="limpar(8)">
             </div>
         </div>
-        
-        <div class="notItem">
-            <img class="img" src="#" alt="">
-            <div class="left">
-                <p>Produto: <input type="text" class="desc" value="" disabled></p>
-                <p>Plataforma: <input type="text" class="platform" value="" disabled></p>
-            </div>
-
-            <div class="right">
-                <input type="text" class="price" value="" disabled>
-                <input class="delete" type="button" value="Remover" onclick="limpar(8)">
-            </div>
-        </div>
 
 
         <div class="payment">
@@ -164,14 +151,16 @@
             <div class="select">
                 <img src="img/icons/99478346-fcb8b880-2932-11eb-8451-7f2f35335c04.png" alt="">
                 <input type="radio" name="pagment" checked>
-
+            </div>
+            <div class="select">
                 <img src="img/icons/card.png" alt="">
                 <input type="radio" name="pagment">
             </div>
             <div class="select">
                 <img src="img/icons/paypal.png" alt="">
                 <input type="radio" name="pagment">
-
+            </div>
+            <div class="select">
                 <img src="img/icons/visa.png" alt="">
                 <input type="radio" name="pagment">
             </div>
@@ -186,8 +175,7 @@
         </div>
     </div>
 
-    <script src="js/cadastro.js"></script>
-    <script src="js/carrinho.js"></script>
+    <script src="JS/cadastro.js"></script>
 </body>
 
 </html>
