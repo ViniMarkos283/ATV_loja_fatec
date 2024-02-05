@@ -13,15 +13,7 @@
 </head>
 
 <body onload="mostrarCarrinho()">
-    <header>
-        <div class="options">
-            <a href="index.html"><img src="img/icons/loja-de-fachada.png" alt=""></a>
-            <input type="search" placeholder="Pesquise o nome de algum produto">
-            <a href="carrinho.html"><img src="img/icons/carrinho-de-compras.png" alt=""></a>
-            <a href="cadastro.html"><img src="img/icons/login.png" id="user"></a>
-            <button class="logDesactive" onclick="sair()"><img src="img/icons/logout.png" alt="visitante"></button>
-        </div>
-    </header>
+    <div id="headerContainer"></div>
 
     <div class="center">
         <div class="words">
@@ -188,6 +180,7 @@
 
     <script src="js/cadastro.js"></script>
     <script src="js/carrinho.js"></script>
+    <script src="js/loadHeader.js"></script>
 </body>
 
 </html>

@@ -193,5 +193,3 @@ function sair() { // serve para mudar o status de true para false, assim a funç
         }
     }
 }
-
-stats()

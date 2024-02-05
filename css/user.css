@@ -2,7 +2,7 @@ body{
     height: 85vh;
 }
 
-div{
+.center, .ui, .side{
     display: flex;
     align-items: center;
     justify-content: center;
