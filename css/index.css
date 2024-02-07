@@ -1,11 +1,3 @@
-body {
-    width: 100%;
-    height: min-content;
-    background-color: rgb(236, 236, 236);
-    text-decoration: none;
-    font-family: sans-serif;
-}
-
 .list {
     display: flex;
     flex-direction: row;
@@ -148,4 +140,19 @@ option:disabled {
         height: 275px;
         margin-top: 5%;
     }
+}
+
+/* dark mode */
+
+.dark .item{
+    background-color: #ffffff0e;
+}
+
+.dark select{
+    background-color: transparent;
+    color: white;
+}
+
+.dark select option{
+    color: black;
 }

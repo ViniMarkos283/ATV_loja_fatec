@@ -19,3 +19,18 @@ document.addEventListener("DOMContentLoaded", function() {
             console.error('Erro ao carregar o cabeçalho:', error);
         });
 });
+
+
+function chargeTheme(){
+    let body = document.querySelector('body')
+    let icon = document.querySelector('#theme')
+
+    if (body.className == 'dark'){
+        body.classList.remove('dark')
+        icon.src = 'img/icons/moon.png'
+    }else{
+        body.classList.add("dark")
+        icon.src = 'img/icons/sun.png'
+
+    }
+}
