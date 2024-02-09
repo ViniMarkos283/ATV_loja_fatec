@@ -87,3 +87,13 @@ function compra() { // mensagem de compra realizada, junto ao zeramento da lista
     carrinho() // zera a lista
     somarItens()
 }
+
+
+// ve se a função de criar o carrinho foi chamada, se não: ele chama, se sim: marca como verdadeiro
+if (!localStorage.getItem('carrinho')) {
+    // Se não foi executada, execute a função aqui
+    carrinho();
+
+    // Marca que a função foi executada
+    localStorage.setItem('carrinho', 'true');
+}

@@ -1,5 +1,5 @@
 // Este código será executado quando o DOM estiver completamente carregado
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     // Usando o método fetch para buscar o conteúdo do arquivo 'header.html' do servidor
     fetch('header.html')
         // Manipulação da resposta do fetch, transformando-a em texto
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
             // Inserção do conteúdo do cabeçalho na div com o id 'headerContainer'
             document.getElementById('headerContainer').innerHTML = data;
             // Chamada para a função 'stats()', que provavelmente atualiza o estado do cabeçalho
-            stats(); 
+            stats();
             // Rola a página para o topo
             window.scrollTo(0, 0);
         })
@@ -20,16 +20,30 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 });
 
-function chargeTheme(){
+function setTheme() {
     let body = document.querySelector('body')
     let icon = document.querySelector('#theme')
 
-    if (body.className == 'dark'){
+    if (localStorage.getItem('theme') === 'light') {
         body.classList.remove('dark')
         icon.src = 'img/icons/moon.png'
-    }else{
+    } else {
         body.classList.add("dark")
         icon.src = 'img/icons/sun.png'
 
     }
+}
+
+function chargeTheme() {
+    if (localStorage.getItem('theme') === 'light') {
+        localStorage.setItem('theme', 'dark');
+        setTheme()
+    } else {
+        localStorage.setItem('theme', 'light');
+        setTheme()
+    }
+}
+
+if (localStorage.getItem('theme') === null) {
+    localStorage.setItem('theme', 'light');
 }

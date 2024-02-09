@@ -5,7 +5,7 @@
 }
 
 body {
-    transition: 0.5s;
+    transition: 0.1s;
     background-color: rgb(236, 236, 236);
     text-decoration: none;
     font-family: sans-serif;
@@ -85,7 +85,7 @@ input:focus ,button:focus{
 
 /* dark mode */
 .dark{
-    transition: 0.5s;
+    transition: 0.1s;
     background-color: rgb(32, 32, 32);
     color: white;
 }
