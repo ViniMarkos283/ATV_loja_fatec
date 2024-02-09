@@ -1,0 +1,50 @@
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 85vh;
+}
+
+.ui{
+    display: flex;
+    background-color: white;
+    width: 75%;
+    flex-direction: row;
+    border-radius: 18px;
+    padding: 15px;
+}
+
+.left, .right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    gap: 10px;
+    text-align: center;
+}
+
+.left div{
+    display: flex;
+    flex-direction: row;
+}
+
+.data{
+    background-color: transparent;
+    border: 0 none;
+}
+
+#img{
+    width: 500px;
+    height: 500px;
+}
+
+.small{
+    width: 125px;
+    height: 100px;
+}
+
+.buy, .car{
+    padding: 15px;
+    background-color: lightgreen;
+    border: 0 none;
+}

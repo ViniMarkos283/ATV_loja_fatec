@@ -1,17 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/x-icon" href="img/icons/loja-de-jogos.png">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-            integrity="sha34-Gn534xqQ1aoWXA+05RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/index.css">
-        <link rel="stylesheet" href="css/header.css">
-        <title>Produto</title>
-    </head>
+
+<head>
+    <meta charset="UTF-">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/icons/loja-de-jogos.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha34-Gn534xqQ1aoWXA+05RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/compra.css">
+    <link rel="stylesheet" href="css/header.css">
+    <title>Produto</title>
+</head>
+
 <body>
     <div id="headerContainer"></div>
+
+    <div class="center">
+        <div class="ui">
+            <div class="left">
+                <img id="img" src="" alt="">
+                <div>
+                    <img class="small" src="" alt="">
+                    <img class="small" src="" alt="">
+                    <img class="small" src="" alt="">
+                    <img class="small" src="" alt="">
+                </div>
+            </div>
+            <div class="right">
+                <input type="text" class="data" value="Produto" disabled>
+                <input type="text" class="data" value="descrição" disabled>
+                <input type="text" class="data" value="Preço" disabled>
+                <div>
+                    <input class="buy" type="button" value="Comprar">
+                    <input class="car" type="button" value="Add ao Carrinho">
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <script src="js/cadastro.js"></script>
@@ -19,4 +44,5 @@
     <script src="js/itens.js"></script>
     <script src="js/loadHeader.js"></script>
 </body>
+
 </html>
