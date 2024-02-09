@@ -181,3 +181,10 @@
     margin-left: 10px;
 }
 
+/* dark mode */
+
+.dark .item, .dark .payment, .dark .clean{
+    background-color: #ffffff0e;
+}
+
+

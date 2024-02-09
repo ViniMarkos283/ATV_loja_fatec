@@ -57,3 +57,21 @@ body{
     font-weight: bolder;
     font-size: x-large;
 }
+
+/* dark mode */
+
+.dark .ui{
+    background-color: #ffffff0e;
+}
+
+.dark .switch{
+    color: red;
+}
+
+.dark #id, .dark #inputFile{
+    color: white;
+}
+
+.dark .data{
+    color: black;
+}

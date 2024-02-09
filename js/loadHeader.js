@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 });
 
-
 function chargeTheme(){
     let body = document.querySelector('body')
     let icon = document.querySelector('#theme')

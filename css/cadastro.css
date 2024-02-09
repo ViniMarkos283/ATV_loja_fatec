@@ -66,3 +66,14 @@ span {
     color: white;
     font-weight: bolder;
 }
+
+
+/* dark mode */
+
+.dark .ui{
+    background-color: #ffffff0e;
+}
+
+.dark .text{
+    color: black;
+}

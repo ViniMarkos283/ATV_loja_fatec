@@ -123,11 +123,11 @@ function choiceApagar() {
 }
 
 
-function limparCampos() { // limpa os cmapos dos inputs, só isso
+function limparCampos() { // limpa os campos dos inputs, só isso
     document.querySelector('#name').value = ''
     document.querySelector('#email').value = ''
     document.querySelector('#password').value = ''
-    document.querySelector('#confirPass').value = ''
+    document.querySelector('#confirmPass').value = ''
 }
 
 function exibe() {
@@ -137,7 +137,7 @@ function exibe() {
 
     for (let i = 0; i < dados.length; i++) {
         if (dados[i].status == true) {
-            document.querySelector('#id').value = dados[i].id
+            document.querySelector('#id').value = 'Seu ID: ' + dados[i].id
             document.querySelector('#name').value = dados[i].name
             document.querySelector('#email').value = dados[i].email
         }
