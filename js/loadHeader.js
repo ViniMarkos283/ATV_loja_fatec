@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 });
 
-function setTheme() {
+function setTheme() { // função que muda o tema da pagina a partir do valor recebido pelo localStorage
     let body = document.querySelector('body')
     let icon = document.querySelector('#theme')
 
@@ -34,7 +34,7 @@ function setTheme() {
     }
 }
 
-function chargeTheme() {
+function chargeTheme() { // função manual que muda o valor guardado no localStorage
     if (localStorage.getItem('theme') === 'light') {
         localStorage.setItem('theme', 'dark');
         setTheme()

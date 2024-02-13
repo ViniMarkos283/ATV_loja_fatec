@@ -102,7 +102,7 @@ function apagar() {
 
     for (let i = 0; i < dados.length; i++) {
         if (id == dados[i].id) {
-            delete dados[i] 
+            delete dados[i]
             dados.splice(i, 1);
             alert('cadastro apagado')
             break

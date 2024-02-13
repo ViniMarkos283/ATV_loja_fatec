@@ -9,7 +9,7 @@ function carrinho() {
 // função de adicionar, onde os parametros pegarão os valores nos inputs do html e trarão para cá através do onclick, sem precisar repetir o código de add para cada um
 function addCarrinho(num) {
     const carrinho = JSON.parse(sessionStorage.getItem("shopCart"));
-    const itens = JSON.parse(sessionStorage.getItem("produtos"))
+    const itens = produtos()
 
     let im = itens[num].img
     let pt = document.querySelectorAll('#platform');

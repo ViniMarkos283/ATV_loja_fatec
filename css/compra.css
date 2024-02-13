@@ -18,6 +18,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: left;
     width: 50%;
     gap: 10px;
     text-align: center;
@@ -31,6 +32,7 @@
 .data{
     background-color: transparent;
     border: 0 none;
+    font-weight: bold;
 }
 
 #img{
@@ -44,7 +46,20 @@
 }
 
 .buy, .car{
+    font-weight: bolder;
     padding: 15px;
-    background-color: lightgreen;
     border: 0 none;
+    border-radius: 15px;
+}
+
+.buy{
+    width: 400px;
+    background-color: lightgreen;
+    color: green;
+}
+
+.car{
+    width: 270px;
+    background-color: rgba(65, 137, 230, 0.281);
+    color: rgb(1, 115, 182);
 }
