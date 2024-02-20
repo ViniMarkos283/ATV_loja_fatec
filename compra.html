@@ -12,13 +12,13 @@
     <title>Produto</title>
 </head>
 
-<body>
+<body onload="loadProduto()">
     <div id="headerContainer"></div>
 
     <div class="center">
         <div class="ui">
             <div class="left">
-                <img id="img" src="" alt="">
+                <img id="image" src="" alt="">
                 <div>
                     <img class="small" src="" alt="">
                     <img class="small" src="" alt="">
@@ -27,12 +27,12 @@
                 </div>
             </div>
             <div class="right">
-                <input type="text" class="data" value="Produto" disabled>
-                <input type="text" class="data" value="descrição" disabled>
-                <input type="text" class="data" value="Preço" disabled>
+                <input id="product" type="text" class="data" value="Produto" disabled>
+                <input id="platform" type="text" class="data" value="descrição" disabled>
+                <input id="prices" type="text" class="data" value="Preço" disabled>
                 <div>
-                    <input class="buy" type="button" value="Comprar">
-                    <input class="car" type="button" value="Add ao Carrinho">
+                    <input id="buy" class="pay" type="button" value="Comprar" onclick="alert('por favor! faça o login antes de finalizar a compra')">
+                    <input class="car" type="button" value="Add ao Carrinho" onclick="chosenCarrinho()">
                 </div>
             </div>
         </div>
@@ -40,6 +40,7 @@
 
 
     <script src="js/cadastro.js"></script>
+    <script src="js/compra.js"></script>
     <script src="js/carrinho.js"></script>
     <script src="js/itens.js"></script>
     <script src="js/loadHeader.js"></script>

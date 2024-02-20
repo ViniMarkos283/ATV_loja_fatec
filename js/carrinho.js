@@ -17,6 +17,11 @@ function addCarrinho(num) {
     let dc = itens[num].desc
     let pc = parseFloat(itens[num].price);
 
+
+    if(pt[num].value === undefined){
+        plat = sessionStorage.getItem('platform')
+    }
+
     let item_existe = false;
     for (let i = 0; i < carrinho.length; i++) {
         if (carrinho[i].descricao === dc) {
@@ -33,6 +38,7 @@ function addCarrinho(num) {
 
         const shopCart = JSON.stringify(carrinho);
         sessionStorage.setItem("shopCart", shopCart);
+        alert('Item adicionado ao carrinho!')
     }
 }
 
@@ -83,7 +89,7 @@ function limpar(i) { // remove os itens do carrinho de compras e reorganiza a li
 
 function compra() { // mensagem de compra realizada, junto ao zeramento da lista inteira e do valor total
     alert("Compra realizada com sucesso!")
-    location.reload(); // recarrega a pagina
+    window.location.href = "index.html";
     carrinho() // zera a lista
     somarItens()
 }
