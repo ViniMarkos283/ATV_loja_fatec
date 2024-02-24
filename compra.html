@@ -30,8 +30,29 @@
                 <input id="product" type="text" class="data" value="Produto" disabled>
                 <input id="platform" type="text" class="data" value="descrição" disabled>
                 <input id="prices" type="text" class="data" value="Preço" disabled>
+
+                <div class="payment">
+                    <div>
+                        <h5>Escolha o metodo de pagamento:</h5>
+                    </div>
+                    <div>
+                        <img src="img/icons/99478346-fcb8b880-2932-11eb-8451-7f2f35335c04.png" alt="">
+                        <input type="radio" name="pagment" checked>
+
+                        <img src="img/icons/card.png" alt="">
+                        <input type="radio" name="pagment">
+
+                        <img src="img/icons/paypal.png" alt="">
+                        <input type="radio" name="pagment">
+
+                        <img src="img/icons/visa.png" alt="">
+                        <input type="radio" name="pagment">
+                    </div>
+                </div>
+
                 <div>
-                    <input id="buy" class="pay" type="button" value="Comprar" onclick="alert('por favor! faça o login antes de finalizar a compra')">
+                    <input id="buy" class="pay" type="button" value="Comprar"
+                        onclick="alert('por favor! faça o login antes de finalizar a compra')">
                     <input class="car" type="button" value="Add ao Carrinho" onclick="chosenCarrinho()">
                 </div>
             </div>

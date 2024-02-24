@@ -20,7 +20,7 @@ function cadastrar() {
 
     } else {
         if (nm != "" && em != "" && ps != "") {
-            let data = { id: dados.length + 1, name: nm, email: em, password: ps, status: false, image: null } // declara a estrutura de como os dados vao ser recebidos dentro da table
+            let data = { id: dados.length + 1, name: nm, email: em, password: ps, status: false } // declara a estrutura de como os dados vao ser recebidos dentro da table
             dados.push(data) // envia o data para dentro da const dados
 
             const table = JSON.stringify(dados) // stringifica a table
@@ -47,7 +47,7 @@ function logar() {
 
     for (let i = 0; i < dados.length; i++) { // loga só o escolhido
         if (em == dados[i].email && ps == dados[i].password) { // caso o valor dentro dos daods tenha algum parecido com o que foi informado pelo input...
-            let data = { id: dados[i].id, name: dados[i].name, email: dados[i].email, password: dados[i].password, status: true, image: dados[i].image }
+            let data = { id: dados[i].id, name: dados[i].name, email: dados[i].email, password: dados[i].password, status: true }
             dados[i] = data
 
             const table = JSON.stringify(dados)
@@ -84,7 +84,7 @@ function alterar() {
 
     for (let i = 0; i < dados.length; i++) {
         if (id == dados[i].id) {
-            let data = { id: dados[i].id, name: nm, email: em, password: ps, image: null }
+            let data = { id: dados[i].id, name: nm, email: em, password: ps }
 
             dados[i] = data
             localStorage.setItem('table', JSON.stringify(dados)) // versao resumida de como stringificar e setar ao msm tempo
@@ -141,12 +141,6 @@ function exibe() {
             document.querySelector('#name').value = dados[i].name
             document.querySelector('#email').value = dados[i].email
         }
-        if (dados[i].image == null) {
-            ft.setAttribute('src', 'img/icons/conf.png')
-        }
-        else {
-            ft.src = dados[i].image
-        }
     }
 
 }
@@ -154,28 +148,29 @@ function exibe() {
 function stats() { // verifica se tem alguém com o status no true, se tiver, muda o header para a versão logada
     const dados = JSON.parse(localStorage.getItem('table'))
 
-    user = document.querySelector('#user')
-    a = document.querySelectorAll('a')
-    buyButton = document.querySelector('#buy')
-    logout = document.querySelector('.logDesactive, .logActive')
+    const user = document.querySelectorAll('#user')
+    const a = document.querySelectorAll('a')
+    const buyButton = document.querySelector('#buy')
+    const logout = document.querySelectorAll('.logDesactive, .logActive')
 
     for (let i = 0; i < dados.length; i++) {
         if (dados[i].status == true) {
-            if (dados[i].image == null) {
-                user.src = "img/icons/conf.png"
+            for (let i = 0; i < user.length; i++) {
+                user[i].src = "img/icons/conf.png"
+                user[i].setAttribute('class', 'log')
             }
-            else {
-                user.src = dados[i].image
-            }
-            user.setAttribute('class', 'log')
-            a[2].setAttribute('href', 'user.html')
+            a[2, 5].setAttribute('href', 'user.html')
+            a[5].innerHTML = a[5].innerHTML + 'Seu perfil';
 
             if (buyButton) {
                 buyButton.setAttribute('onclick', 'compra()');
             }
-            logout.classList.replace('logDesactive', 'logActive')
+            logout[0, 1].classList.replace('logDesactive', 'logActive')
+        }else{
+            a[5].innerHTML = a[5].innerHTML + 'Fazer o Login';
         }
     }
+
 }
 
 function sair() { // serve para mudar o status de true para false, assim a função status vai entender q não tem ninguem logado

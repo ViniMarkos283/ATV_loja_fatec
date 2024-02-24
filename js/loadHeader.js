@@ -47,3 +47,15 @@ function chargeTheme() { // função manual que muda o valor guardado no localSt
 if (localStorage.getItem('theme') === null) {
     localStorage.setItem('theme', 'light');
 }
+
+
+function callMenu(){
+    menu = document.querySelector('#menu')
+
+    if (menu.classList.contains('off')){
+        menu.classList.remove('off')
+    }else{
+        menu.classList.add('off')
+    }
+}
+

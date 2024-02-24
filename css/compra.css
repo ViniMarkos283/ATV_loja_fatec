@@ -1,11 +1,11 @@
-.center{
+.center {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 85vh;
 }
 
-.ui{
+.ui {
     display: flex;
     background-color: white;
     width: 75%;
@@ -14,7 +14,8 @@
     padding: 15px;
 }
 
-.left, .right{
+.left,
+.right {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -24,25 +25,26 @@
     text-align: center;
 }
 
-.left div{
+.left div {
     display: flex;
     flex-direction: row;
 }
 
-.data{
+.data {
     background-color: transparent;
     border: 0 none;
     font-weight: bold;
     font-size: xx-large;
+    text-align: center;
 }
 
-#image{
+#image {
     width: 600px;
     height: 600px;
     border-radius: 20px;
 }
 
-.small{
+.small {
     width: 150px;
     height: 100px;
     overflow: hidden;
@@ -52,27 +54,93 @@
 
 }
 
-.small:hover{
+.small:hover {
     transform: scale(1.05);
     padding: 0;
     transition: 0.5s;
 }
 
-.pay, .car{
+.pay,
+.car {
     font-weight: bolder;
     padding: 15px;
     border: 0 none;
     border-radius: 15px;
 }
 
-.pay{
+.pay {
     width: 400px;
     background-color: lightgreen;
     color: green;
 }
 
-.car{
+.car {
     width: 270px;
     background-color: rgba(65, 137, 230, 0.281);
     color: rgb(1, 115, 182);
+}
+
+.payment {
+    display: flex;
+    flex-direction: column;
+}
+
+.payment div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.payment img {
+    width: 50px;
+}
+
+@media screen and (max-width: 767px) {
+    #image {
+        width: 250px;
+        height: 250px;
+        border-radius: 20px;
+    }
+
+    .data {
+        font-size: medium;
+    }
+
+    .ui {
+        width: 90%;
+        display: block;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+    }
+    
+    .left{
+        flex-direction: row;
+    }
+
+    .left div{
+        display: block;
+    }
+
+    .small {
+        width:90px;
+        height: 65px;
+    }
+
+    .pay,
+    .car {
+        width: 150px;
+        margin: 5px;
+    }
+}
+
+.dark .ui{
+    background-color: #ffffff0e;
+
+}
+
+.dark .pay{
+    color: green;
 }

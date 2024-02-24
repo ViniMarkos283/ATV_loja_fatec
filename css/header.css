@@ -1,9 +1,3 @@
-#headerFrame {
-    width: 100%;
-    height: 100px; /* Ajuste a altura conforme necessário */
-    border: none; /* Remova a borda, se necessário */
-}
-
 body {
     transition: 0.1s;
     background-color: rgb(236, 236, 236);
@@ -36,8 +30,8 @@ body {
 
 @media screen and (max-width: 767px) {
     .options input {
+        width: 70%;
         padding: 0.2%;
-        width: 37%;
         border-radius: 5px;
         padding: 1%;
     }
@@ -45,11 +39,10 @@ body {
 
 .options img {
     width: 40px;
-    height: 40px;
     filter: invert(100);
 }
 
-#user.log{
+#user.log {
     border-radius: 50%;
     filter: invert(0);
 
@@ -73,27 +66,89 @@ body {
     display: none;
 }
 
-.theme{
+.theme {
     background-color: transparent;
     border: 0 none;
 }
 
-input:focus ,button:focus{
+input:focus,
+button:focus {
     outline: none;
+}
+
+.smartmenu {
+    display: none;
+}
+
+/* menu mobile  */
+
+@media screen and (max-width: 767px) {
+    #headerContainer{
+        position: sticky;
+        top:  0;
+        z-index: 1;
+    }
+    .smartmenu {
+        display: block;
+    }
+
+    .options a {
+        display: none;
+    }
+
+    .logActive{
+        text-align: left;
+    }
+
+}
+
+.smart {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100%;
+    width: 50%;
+    right: 0;
+    background-color: white;
+    transition: 0.5s;
+}
+
+.off {
+    width: 0;
+    transition: 0.5s;
+}
+
+
+.smart a {
+    white-space: nowrap;
+    color: black;
+}
+
+.smart img {
+    width: 25px;
+    margin: 10px;
 }
 
 
 /* dark mode */
-.dark{
+.dark {
     transition: 0.1s;
     background-color: rgb(32, 32, 32);
     color: white;
 }
 
-.dark input{
+.dark input {
     color: white;
 }
 
-.dark .options input{
+.dark .options input {
     background-color: rgb(32, 32, 32);
+}
+
+.dark .smart {
+    background-color: rgb(32, 32, 32);
+}
+
+.dark .smart a, .dark .smart button {
+    filter: invert(100);
 }
