@@ -55,10 +55,10 @@ function icons() { // os endereços dos icones dos produtos ficarão aqui e ser�
         }, // produto # 1
 
         {
-            icon1: '',
-            icon2: '',
-            icon3: '',
-            icon4: ''
+            icon1: 'https://www.nme.com/wp-content/uploads/2023/03/Resident-Evil-4-remake-hero-credit-Capcom@2000x1271.jpg',
+            icon2: 'https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2023/01/resident-evil-4-2942734.jpg?tf=3840x',
+            icon3: 'https://t2.tudocdn.net/661361?w=1920',
+            icon4: 'https://www.heldenderfreizeit.com/wp-content/uploads/2023/03/resident-evil-4-review-aufmacher-800-1200x800_c.jpg'
         }, // produto # 2
 
         {
