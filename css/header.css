@@ -110,7 +110,7 @@ button:focus {
     width: 50%;
     right: 0;
     background-color: white;
-    transition: 0.5s;
+    box-shadow: -4px 0px 18px 0px rgba(0,0,0,0.1);  transition: 0.5s;
 }
 
 .off {

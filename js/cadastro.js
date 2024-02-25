@@ -140,6 +140,7 @@ function exibe() {
             document.querySelector('#id').value = 'Seu ID: ' + dados[i].id
             document.querySelector('#name').value = dados[i].name
             document.querySelector('#email').value = dados[i].email
+            ft.src = "img/icons/conf.png"
         }
     }
 
@@ -160,14 +161,12 @@ function stats() { // verifica se tem alguém com o status no true, se tiver, mu
                 user[i].setAttribute('class', 'log')
             }
             a[2, 5].setAttribute('href', 'user.html')
-            a[5].innerHTML = a[5].innerHTML + 'Seu perfil';
+            a[5].innerHTML = '<img class="log" src="img/icons/conf.png" id="user"> Seu perfil';
 
             if (buyButton) {
                 buyButton.setAttribute('onclick', 'compra()');
             }
             logout[0, 1].classList.replace('logDesactive', 'logActive')
-        }else{
-            a[5].innerHTML = a[5].innerHTML + 'Fazer o Login';
         }
     }
 
